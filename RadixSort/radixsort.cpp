@@ -55,7 +55,9 @@ void RadixSort::radixPass (short Offset, long N, int *source, int *dest, long *c
 	for (i = N; i > 0; --i, bp += sizeof(int) , ++sp) 
 		{
 		cp = count + *bp;
-		dest[*cp] = *sp;
+		dest[*cp] = *sp;///////Здесь это надо показать
+		sliders[*cp]->setValue(*sp);
+		
 		++(*cp);
 		}
 	}
@@ -89,11 +91,8 @@ void RadixSort::on_RedButton_clicked()
 		arr[i]=(sliders[i]->value());
 		}
 	radixSort(arr,sliders.count());
-	for (int i=0; i<sliders.count() ;++i)
-		{
-		sliders[i]->setValue(arr[i]);
-		}
 
+	delete arr;
 	}
 
 RadixSort::~RadixSort()

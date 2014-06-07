@@ -6,6 +6,13 @@
 
 class RadixSort : public QMainWindow
 {
+	//class sorter : public QThread
+	//	{
+	//	Q_OBJECT
+	//	protected:
+	//		void run();
+	//	};
+
 	Q_OBJECT
 
 public:
@@ -21,7 +28,7 @@ private:
 	int valuesCount;
 	Ui::RadixSortClass ui;
     QList<QSlider*> sliders;
-
+	int i;
 };
 
 #endif // RADIXSORT_H
