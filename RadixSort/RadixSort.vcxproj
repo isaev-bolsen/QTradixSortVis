@@ -92,6 +92,7 @@
     </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="radixsort.cpp" />
+    <ClCompile Include="Sorter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="radixsort.h">
