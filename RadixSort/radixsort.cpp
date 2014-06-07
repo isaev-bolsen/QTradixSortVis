@@ -82,11 +82,18 @@ void RadixSort::radixSort(int* &in,int n)
 
 void RadixSort::on_RedButton_clicked()
 	{
-	QList<int> arr; 	
+	int* arr;
+	arr=new int[sliders.count()];
 	for (int i=0; i<sliders.count() ;++i)
 		{
-		arr.push_back(sliders[i]->value());
+		arr[i]=(sliders[i]->value());
 		}
+	radixSort(arr,sliders.count());
+	for (int i=0; i<sliders.count() ;++i)
+		{
+		sliders[i]->setValue(arr[i]);
+		}
+
 	}
 
 RadixSort::~RadixSort()
