@@ -3,9 +3,12 @@
 RadixSort::RadixSort(QWidget *parent)	: QMainWindow(parent)
 	{
 	ui.setupUi(this);
-	valuesCount=50;
-	maxValue=1000;
-
+	init(75,1000);
+	}
+void RadixSort::init(int count,int max)
+	{
+	valuesCount=count;
+	maxValue=max;
 	for (int i=0; i<valuesCount;++i)
 		{
 		QSlider* slider=new QSlider();
@@ -15,9 +18,6 @@ RadixSort::RadixSort(QWidget *parent)	: QMainWindow(parent)
 		ui.horizontalLayout->addWidget(slider);
 		}
 	}
-
-
-
 void RadixSort::on_RedButton_clicked()
 	{
 	sorter.sliders=sliders;
