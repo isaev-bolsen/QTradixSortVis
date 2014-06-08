@@ -3,7 +3,7 @@
 RadixSort::RadixSort(QWidget *parent)	: QMainWindow(parent)
 	{
 	ui.setupUi(this);
-	valuesCount=30;
+	valuesCount=50;
 	maxValue=1000;
 
 	for (int i=0; i<valuesCount;++i)
