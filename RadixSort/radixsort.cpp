@@ -4,13 +4,13 @@ RadixSort::RadixSort(QWidget *parent)	: QMainWindow(parent)
 	{
 	ui.setupUi(this);
 	valuesCount=30;
-	maxValue=100;
+	maxValue=1000;
 
 	for (int i=0; i<valuesCount;++i)
 		{
 		QSlider* slider=new QSlider();
+		slider->setMaximum(maxValue);
 		slider->setValue(rand()%maxValue);	
-
 		sliders.push_back(slider);
 		ui.horizontalLayout->addWidget(slider);
 		}
